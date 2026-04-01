@@ -1,0 +1,19 @@
+name: Run Port Scanner
+
+on:
+  workflow_dispatch: # ده الزرار اللي هنضغط عليه من الموبايل عشان يشتغل
+
+jobs:
+  run-scanner:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Run Python Script
+        run: python "import socket.py moaz.py"
