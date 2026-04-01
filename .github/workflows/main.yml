@@ -16,4 +16,4 @@ jobs:
           python-version: '3.x'
 
       - name: Run Python Script
-        run: python "import socket.py moaz.py"
+        run: echo -e "1\n100" | python "import socket.py moaz.py"
